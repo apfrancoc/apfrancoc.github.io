@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
+    <title>My GitHub Page</title>
     
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Google Fonts (for better typography) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (Optional, but makes styling easier) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Your Name</h1>
-        <p>A brief description about yourself.</p>
+    <div class="hero">
+        <div class="overlay">
+            <h1>Welcome to My Website 🌍</h1>
+            <p>A simple, clean webpage hosted on GitHub Pages</p>
 
-        <!-- Links Section -->
-        <div class="links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-            <a href="mailto:your.email@example.com">Email</a>
+            <!-- Buttons -->
+            <div class="buttons">
+                <a href="#about" class="btn">Learn More</a>
+                <button id="darkModeToggle" class="btn dark-btn">Toggle Dark Mode</button>
+            </div>
         </div>
     </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm building my first GitHub Page! 🚀</p>
+    </section>
+
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>

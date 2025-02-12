@@ -37,9 +37,9 @@ body {
 /* Header (Name at the Top) */
 .header {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 70px; /* Moves name closer to the top */
+    margin-top: 80px; /* Moves name closer to the top */
 }
 
 /* Main Container: Centers Everything */

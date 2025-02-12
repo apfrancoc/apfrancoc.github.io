@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: white; /* Fully white background */
     color: #333;
     transition: background 0.3s, color 0.3s;
     display: flex;
@@ -13,12 +13,33 @@ body {
     height: 100vh;
 }
 
+/* Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #008cba;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #005f73;
+}
+
 /* Header (Name at the Top) */
 .header {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-top: 60px;
 }
 
 /* Main Container: Centers Content */
@@ -33,10 +54,7 @@ body {
 .content {
     display: flex;
     align-items: center;
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
 }
 
@@ -85,7 +103,6 @@ body {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #f4f4f4;
     color: #333;
     margin-top: 20px;
 }

@@ -63,8 +63,8 @@ body {
 
 /* Profile Image */
 .profile img {
-    width: 240px; /* Increase the width */
-    height: 240px; /* Increase the height */
+    width: 220px; /* Increase the width */
+    height: 220px; /* Increase the height */
     border-radius: 50%;
     object-fit: cover;
 }

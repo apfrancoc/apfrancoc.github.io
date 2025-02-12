@@ -1,16 +1,47 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
+/* General Page Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-    // Load dark mode state from localStorage
-    if (localStorage.getItem("dark-mode") === "true") {
-        document.body.classList.add("dark");
-    }
+/* Centered Content */
+.container {
+    text-align: center;
+}
 
-    // Toggle dark mode
-    darkModeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
+/* Name Title */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-        // Save user preference
-        localStorage.setItem("dark-mode", document.body.classList.contains("dark"));
-    });
-});
+/* Description */
+p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #666;
+}
+
+/* Links */
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #008cba;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #005f73;
+}

@@ -15,10 +15,11 @@ body {
 }
 
 /* Navigation Bar - Align to Right */
+/* Navigation Bar - Keep at the top right */
 .navbar {
-    position: absolute;
+    position: fixed; /* Keep it at the top */
     top: 20px;
-    right: 20px; /* Aligns to the right */
+    right: 20px;
     display: flex;
     gap: 20px;
 }
@@ -39,7 +40,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 80px; /* Moves name closer to the top */
+    margin-top: 120px; /* Moves name closer to the top */
 }
 
 /* Main Container: Centers Everything */

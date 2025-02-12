@@ -3,22 +3,22 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white; /* Fully white background */
+    background-color: white;
     color: #333;
-    transition: background 0.3s, color 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
 
-/* Navigation Bar */
+/* Remove default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar - Align to Right */
 .navbar {
     position: absolute;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 20px; /* Aligns to the right */
     display: flex;
     gap: 20px;
 }
@@ -36,26 +36,28 @@ body {
 
 /* Header (Name at the Top) */
 .header {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 60px;
+    padding-left: 20px;
+    margin-top: 40px; /* Move text closer to the top */
 }
 
-/* Main Container: Centers Content */
+/* Main Container: Moves Content to the Top */
 .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the top */
+    justify-content: flex-start;
+    flex-direction: row;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    padding: 20px;
 }
 
 /* Content: Image Left, Text Right */
 .content {
     display: flex;
-    align-items: center;
-    padding: 20px;
-    max-width: 800px;
+    align-items: flex-start;
 }
 
 /* Profile Image */
@@ -69,48 +71,21 @@ body {
 /* Description */
 .description {
     margin-left: 30px;
-    max-width: 400px;
+    max-width: 500px;
 }
 
-.description h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
+/* Adds spacing between paragraphs */
 .description p {
     font-size: 1.1rem;
     line-height: 1.6;
-}
-
-/* Links */
-.links {
-    margin-top: 20px;
-}
-
-.links a {
-    text-decoration: none;
-    color: #008cba;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    transition: color 0.3s;
-}
-
-.links a:hover {
-    color: #005f73;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    color: #333;
-    margin-top: 20px;
+    margin-bottom: 20px; /* Adds spacing between text */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .content {
+    .container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 

@@ -6,33 +6,44 @@ body {
     background-color: #f4f4f4;
     color: #333;
     transition: background 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-/* Header */
+/* Header (Name at the Top) */
 .header {
     text-align: center;
-    padding: 20px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
-/* Main Container */
+/* Main Container: Centers Content */
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
+    flex-direction: column;
+}
+
+/* Content: Image Left, Text Right */
+.content {
+    display: flex;
+    align-items: center;
     background: white;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
 }
 
 /* Profile Image */
 .profile img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -40,7 +51,7 @@ body {
 /* Description */
 .description {
     margin-left: 30px;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 .description h2 {
@@ -76,18 +87,19 @@ footer {
     padding: 15px;
     background-color: #f4f4f4;
     color: #333;
+    margin-top: 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
+    .content {
         flex-direction: column;
         text-align: center;
     }
 
     .profile img {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
         margin-bottom: 20px;
     }
 

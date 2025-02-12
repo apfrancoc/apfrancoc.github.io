@@ -36,18 +36,17 @@ body {
 
 /* Header (Name at the Top) */
 .header {
-    text-align: left;
+    text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    padding-left: 20px;
-    margin-top: 40px; /* Move text closer to the top */
+    margin-top: 40px; /* Moves name closer to the top */
 }
 
-/* Main Container: Moves Content to the Top */
+/* Main Container: Centers Everything */
 .container {
     display: flex;
     align-items: flex-start; /* Aligns content to the top */
-    justify-content: flex-start;
+    justify-content: center; /* Centers horizontally */
     flex-direction: row;
     max-width: 900px;
     margin: 50px auto 0 auto;
@@ -58,6 +57,7 @@ body {
 .content {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
 }
 
 /* Profile Image */
@@ -72,6 +72,7 @@ body {
 .description {
     margin-left: 30px;
     max-width: 500px;
+    text-align: left;
 }
 
 /* Adds spacing between paragraphs */

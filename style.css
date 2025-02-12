@@ -1,7 +1,9 @@
-/* Apply styles to the whole page */
+/* General Page Styling */
 body {
-    margin: 0;
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Hero Section */
@@ -16,7 +18,7 @@ body {
     position: relative;
 }
 
-/* Dark overlay */
+/* Dark overlay for readability */
 .overlay {
     background: rgba(0, 0, 0, 0.6);
     padding: 40px;
@@ -53,4 +55,23 @@ body {
 #about {
     padding: 50px;
     text-align: center;
+    background-color: white;
+    color: black;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+footer a {
+    color: #008cba;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

@@ -39,7 +39,7 @@ body {
     text-align: center;
     font-size: 1.7rem;
     font-weight: bold;
-    margin-top: 60px; /* Moves name closer to the top */
+    margin-top: 70px; /* Moves name closer to the top */
 }
 
 /* Main Container: Centers Everything */
@@ -62,8 +62,8 @@ body {
 
 /* Profile Image */
 .profile img {
-    width: 220px; /* Increase the width */
-    height: 220px; /* Increase the height */
+    width: 240px; /* Increase the width */
+    height: 240px; /* Increase the height */
     border-radius: 50%;
     object-fit: cover;
 }

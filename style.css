@@ -37,9 +37,9 @@ body {
 /* Header (Name at the Top) */
 .header {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
-    margin-top: 40px; /* Moves name closer to the top */
+    margin-top: 42px; /* Moves name closer to the top */
 }
 
 /* Main Container: Centers Everything */
@@ -62,8 +62,8 @@ body {
 
 /* Profile Image */
 .profile img {
-    width: 180px;
-    height: 180px;
+    width: 220px; /* Increase the width */
+    height: 220px; /* Increase the height */
     border-radius: 50%;
     object-fit: cover;
 }

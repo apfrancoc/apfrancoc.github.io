@@ -122,7 +122,7 @@ body {
 
 /* “Presented at:” line */
 .presented {
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-style: italic;
   color: #444;
   margin: 0 0 3px 0; /* tight spacing */

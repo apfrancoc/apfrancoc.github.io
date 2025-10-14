@@ -208,6 +208,20 @@ details.abstract {
   margin-bottom: 1px !important;
 }
 
+/* Prevent page shift when <details> opens (reserve scrollbar space) */
+html {
+  scrollbar-gutter: stable;   /* modern fix */
+  overflow-y: scroll;         /* fallback for older browsers */
+}
+
+/* Also avoid any focus jiggle on the summary */
+.abstract summary {
+  outline: none;
+}
+.abstract summary:focus {
+  outline: none;
+}
+
 
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {

@@ -144,6 +144,7 @@ body {
 /* ---------- Abstract toggle ---------- */
 .abstract {
   margin-left: var(--subindent);
+  margin-top: 0;
 }
 
 .abstract summary {

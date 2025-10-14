@@ -1,158 +1,110 @@
-/* Remove top margin so website starts right away */
+/* ---------- Base / reset ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-  margin-top: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 0;             /* start at top */
   padding-top: 0;
 }
 
-/* kill the default top margin on the first paragraph */
-.description p:first-child {
-  margin-top: 0;
-}
-
-/* Remove nav bar entirely */
+/* Kill nav if it still exists */
 .navbar { display: none; }
 
-/* Keep name closer to the top */
+/* ---------- Header (name) ---------- */
 .header {
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
-  margin-top: 40px;   /* was 120px */
+  margin-top: 40px;          /* closer to top */
   margin-bottom: 15px;
   color: #000;
 }
 
-/* Profile image */
-.profile img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 12px;
-}
-
-/* Buttons under image */
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.btn {
-  background-color: #008cba;
-  color: white;
-  text-decoration: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #006f98;
-}
-
-
-/* ---------- Base ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
-  color: #333;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* ---------- Navigation ---------- */
-.navbar {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 20px;
-}
-.nav-link {
-  text-decoration: none;
-  color: #008cba;
-  font-size: 1rem;
-  transition: color .2s;
-}
-.nav-link:hover { color: #005f73; }
-
-/* ---------- Header (Name) ---------- */
-.header {
-  text-align: center;
-  font-size: 1.2rem;          /* small, clean name */
-  font-weight: bold;
-  margin-top: 120px;
-  margin-bottom: 15px;
-  color: #000;
-}
-
-/* ---------- Main Container / Layout ---------- */
+/* ---------- Layout ---------- */
 .container {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  flex-direction: row;
-  max-width: 1100px;          /* wider so abstracts read better */
-  margin: 50px auto 0;
+  max-width: 1100px;
+  margin: 40px auto 0;
   padding: 20px;
 }
+
 .content {
   display: flex;
+  flex-direction: row;       /* image left, text right on desktop */
   align-items: flex-start;
   justify-content: center;
   gap: 30px;
 }
 
-/* ---------- Profile Image ---------- */
+/* Left column: photo + links */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* center the photo and links */
+  flex: 0 0 auto;            /* don’t stretch */
+}
+
 .profile img {
   width: 170px;
   height: 170px;
-  border-radius: 50%;         /* circle */
+  border-radius: 50%;
   object-fit: cover;
   display: block;
+  margin-bottom: 10px;
 }
 
-/* ---------- Description ---------- */
-.description {
-  margin-left: 30px;
-  max-width: 640px;
-  text-align: left;
-  color: #444;                /* dark gray for bio */
+/* Garg-style links under photo */
+.buttons {
+  text-align: center;
+  margin-top: 4px;
+  font-size: 0.95rem;
 }
+.buttons a {
+  color: #008cba;
+  text-decoration: none;
+  margin: 0 4px;
+}
+.buttons a:hover { text-decoration: underline; }
+
+/* Right column: bio + papers */
+.description {
+  text-align: left;
+  max-width: 640px;
+  color: #444;               /* dark gray for bio */
+  margin-left: 20px;
+}
+.description p:first-child { margin-top: 0; }  /* remove default top gap */
 .description p { margin-bottom: 18px; }
 
-/* ---------- Papers Section ---------- */
+/* ---------- Papers ---------- */
 .papers { margin-top: 40px; }
 .papers h2 {
   font-size: 1.1rem;
   font-weight: bold;
   color: #000;
-  border: none;               /* no underline */
-  padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 10px;       /* no underline */
 }
 
 /* Each paper block */
-.paper {
-  margin-bottom: 16px;        /* tight between papers */
-  color: #000;                /* paper text in black */
-}
+.paper { margin-bottom: 16px; color: #000; }
 
-/* Title */
-/* Paper title line */
+/* Title line: keep [Draft] inline with title */
 .paper h3 {
   font-size: 1rem;
   font-weight: 600;
   color: #000;
   margin-bottom: 2px;
-  display: inline; /* allow inline link */
+  display: inline;           /* allows [Draft] on same line */
 }
+.plink a { color: #008cba; text-decoration: none; margin-left: 6px; }
+.plink a:hover { text-decoration: underline; }
 
-/* Keep Job Market Paper below title */
+/* Line under title: “Job Market Paper” alone */
 .meta-line {
   margin: 0 0 3px 0;
   display: flex;
@@ -160,61 +112,40 @@ body {
   gap: 8px;
   align-items: baseline;
 }
+.jlabel { font-style: italic; font-size: 1rem; color: #555; }
 
-/* Job Market Paper label below title */
-.jlabel {
-  font-style: italic;
-  font-size: 1rem;
-  color: #555;
-  display: block;  /* ensures it's below title line */
-  margin-top: 2px;
-}
+/* Sub-lines (indent kept subtle and consistent) */
+:root { --subindent: 12px; }   /* control indent here */
 
-/* [Draft] — blue link stays inline with title */
-.plink a {
-  color: #008cba;
-  text-decoration: none;
-  margin-left: 6px;
-}
-.plink a:hover { text-decoration: underline; }
-
-
-/* Presented at: normal (not italic), slightly smaller, tight before Abstract */
 .presented {
-  font-size: 0.8rem;
-  font-style: normal;
+  font-size: 0.95rem;
   color: #555;
-  margin: 0 0 0 0;
+  margin: 0 0 0  var(--subindent);
 }
 
-/* Coauthors line — "with" in black, names in blue italic */
 .coauthors {
   font-size: 0.95rem;
-  font-style: normal;       /* base text (the 'with') not italic */
-  color: #000;              /* 'with' is black */
-  margin: 2px 0 0 0;
+  color: #000;                 /* “with” in black */
+  margin: 0 0 0  var(--subindent);
 }
-
 .coauthors a {
-  font-style: italic;       /* only the names are italic */
-  color: #008cba;           /* same blue as [Draft] */
+  font-style: italic;          /* only names italic */
+  color: #008cba;              /* same blue as [Draft] */
   text-decoration: none;
 }
+.coauthors a:hover { text-decoration: underline; }
 
-.coauthors a:hover {
-  text-decoration: underline;
-}
-
-/* Abstract toggle + arrow */
+/* Abstract toggle (indented slightly, not bold, with arrow) */
+.abstract { margin-left: var(--subindent); }
 .abstract summary {
   cursor: pointer;
   color: #008cba;
-  font-weight: 500;
-  margin-top: 0;            /* very close to Presented at */
+  font-weight: normal !important;  /* ensure not bold */
+  margin-top: 0;
   margin-bottom: 0;
-  list-style: none;           /* hide default disclosure triangle */
+  list-style: none;
   position: relative;
-  padding-left: 20px;         /* room for custom arrow */
+  padding-left: 18px;              /* room for arrow */
 }
 .abstract summary::before {
   content: "▶";
@@ -222,56 +153,25 @@ body {
   left: 0;
   top: 0;
   color: #008cba;
-  font-weight: normal;   /* remove bold */
   transition: transform .2s ease;
 }
 details[open] summary::before { transform: rotate(90deg); }
 
-/* Abstract text (when opened) */
+/* Abstract body (slightly smaller + same indent) */
 .abstract div {
   margin-top: 3px;
   color: #444;
-  font-size: 0.95rem;   /* slightly smaller text */
-  margin-left: 18px;    /* keep the same indent */
+  font-size: 0.95rem;
+  margin-left: 18px;              /* align with text after arrow */
 }
 
-/* Indent coauthors, presented, and abstract lines */
-.presented,
-.coauthors,
-.abstract {
-  margin-left: 18px;   /* subtle indent to the right */
-}
-
-/* Tighten Abstract spacing again (keep compact look) */
-.abstract summary {
-  cursor: pointer;
-  color: #008cba;
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* Make Abstract not bold + keep it indented */
-.abstract summary {
-  cursor: pointer;
-  color: #008cba;
-  font-weight: normal !important;  /* force normal weight */
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 18px;               /* keep your indent */
-}
-
-.abstract summary:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Responsive (mobile) ---------- */
+/* ---------- Mobile ---------- */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .content {
     flex-direction: column;
@@ -281,12 +181,11 @@ details[open] summary::before { transform: rotate(90deg); }
   .profile img {
     width: 130px;
     height: 130px;
-    margin-bottom: 10px;
   }
   .description {
     margin-left: 0;
     text-align: left;
-    max-width: 90%;
+    max-width: 92%;
   }
   .papers { text-align: left; }
 }

@@ -1,3 +1,53 @@
+/* Remove top margin so website starts right away */
+body {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Remove nav bar entirely */
+.navbar { display: none; }
+
+/* Keep name closer to the top */
+.header {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 40px;   /* was 120px */
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Profile image */
+.profile img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* Buttons under image */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #008cba;
+  color: white;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #006f98;
+}
+
+
 /* ---------- Base ---------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 

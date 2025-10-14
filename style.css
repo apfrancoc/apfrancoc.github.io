@@ -132,15 +132,23 @@ body {
   margin: 0 0 2px 0;
 }
 
-/* Coauthors line like Garg’s (blue + italic, begins with “with …”) */
+/* Coauthors line — "with" in black, names in blue italic */
 .coauthors {
   font-size: 0.95rem;
-  font-style: italic;
-  color: #2563eb;
+  font-style: normal;       /* base text (the 'with') not italic */
+  color: #000;              /* 'with' is black */
   margin: 2px 0 2px 0;
 }
-.coauthors a { color: inherit; text-decoration: none; }
-.coauthors a:hover { text-decoration: underline; }
+
+.coauthors a {
+  font-style: italic;       /* only the names are italic */
+  color: #008cba;           /* same blue as [Draft] */
+  text-decoration: none;
+}
+
+.coauthors a:hover {
+  text-decoration: underline;
+}
 
 /* Abstract toggle + arrow */
 .abstract summary {

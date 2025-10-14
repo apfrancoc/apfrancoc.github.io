@@ -193,6 +193,20 @@ details[open] summary::before { transform: rotate(90deg); }
   margin-bottom: 0;
 }
 
+/* Make Abstract not bold + keep it indented */
+.abstract summary {
+  cursor: pointer;
+  color: #008cba;
+  font-weight: normal !important;  /* force normal weight */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;               /* keep your indent */
+}
+
+.abstract summary:hover {
+  text-decoration: underline;
+}
+
 /* ---------- Responsive (mobile) ---------- */
 @media (max-width: 768px) {
   .container {

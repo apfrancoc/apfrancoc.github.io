@@ -177,6 +177,22 @@ details[open] summary::before { transform: rotate(90deg); }
   color: #444;                /* abstract text dark gray */
 }
 
+/* Indent coauthors, presented, and abstract lines */
+.presented,
+.coauthors,
+.abstract {
+  margin-left: 20px;   /* subtle indent to the right */
+}
+
+/* Tighten Abstract spacing again (keep compact look) */
+.abstract summary {
+  cursor: pointer;
+  color: #008cba;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* ---------- Responsive (mobile) ---------- */
 @media (max-width: 768px) {
   .container {

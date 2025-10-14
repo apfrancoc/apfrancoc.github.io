@@ -36,7 +36,7 @@ body {
 /* ---------- Header (Name) ---------- */
 .header {
   text-align: center;
-  font-size: 1.1rem; /* smaller name */
+  font-size: 1.3rem; /* smaller name */
   font-weight: bold;
   margin-top: 120px;
   margin-bottom: 15px;

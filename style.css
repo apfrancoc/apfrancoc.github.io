@@ -4,6 +4,11 @@ body {
   padding-top: 0;
 }
 
+/* kill the default top margin on the first paragraph */
+.description p:first-child {
+  margin-top: 0;
+}
+
 /* Remove nav bar entirely */
 .navbar { display: none; }
 

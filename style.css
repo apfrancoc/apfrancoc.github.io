@@ -68,21 +68,21 @@ body {
   color: #444;
 }
 
+.buttons strong {
+  font-weight: bold;   /* make CV and Email bold */
+  color: #000;         /* black for the labels */
+}
+
 .buttons a {
-  color: #008cba;            /* blue for actual links */
+  color: #008cba;      /* blue for links (not bold) */
   text-decoration: none;
+  font-weight: normal; /* ensure email link isn't bold */
   margin: 0 3px;
 }
 
 .buttons a:hover {
   text-decoration: underline;
 }
-
-.buttons strong {
-  font-weight: bold;         /* make “CV” and “Email” bold */
-  color: #000;               /* keep them black */
-}
-
 
 /* ---------- Description (right column) ---------- */
 .description {

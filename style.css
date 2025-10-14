@@ -1,100 +1,141 @@
-/* === Sizing + width tweaks === */
+/* ---------- Base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Wider page so abstracts read better */
-.container {
-    /* was max-width: 900px; */
-    max-width: 1100px;  /* try 1100–1200 if you want even wider */
-    margin: 50px auto 0 auto;
-    padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Name size = current Working Papers size */
+/* ---------- Nav (fixed, top-right) ---------- */
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+.nav-link {
+  color: #008cba;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-link:hover { text-decoration: underline; }
+
+/* ---------- Header (name) ---------- */
+/* Smaller name as requested */
 .header {
-    text-align: center;
-    font-size: 1.25rem; /* was 1.8rem */
-    font-weight: bold;
-    margin-top: 120px;
-    margin-bottom: 20px;
-    color: #000;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 120px;
+  margin-bottom: 15px;
+  color: #000;
 }
 
-/* Working Papers a bit smaller */
-.papers h2 {
-    font-size: 1.15rem;  /* was 1.25rem */
-    font-weight: bold;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-bottom: 16px; /* slightly tighter */
-    color: #000;
+/* ---------- Main layout ---------- */
+/* Wider so abstracts read better */
+.container {
+  max-width: 1100px;          /* bump to 1200 if you want even wider */
+  margin: 50px auto 0;
+  padding: 20px;
+}
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
 }
 
-/* Optional: let the text column breathe a little more */
+/* Left: profile image */
+.profile img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Right: description + papers */
 .description {
-    margin-left: 30px;
-    max-width: 640px; /* was 520px */
-    text-align: left;
-    color: #444;
+  max-width: 640px;           /* more breathing room than before */
+  color: #444;                /* dark gray for description text */
+  text-align: left;
+}
+.description p { margin-bottom: 18px; }
+
+/* ---------- Papers ---------- */
+.papers { margin-top: 40px; }
+
+/* Working Papers header: no underline, a bit smaller */
+.papers h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 10px;
 }
 
-/* === Paper block styles === */
+/* Each paper block */
+.paper {
+  margin-bottom: 16px;        /* tighter between papers */
+  color: #000;                /* main paper text in black */
+}
 
-/* Title line + labels */
+/* Title line */
 .paper h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 2px; /* tighter so 'Abstract' can sit closer */
-    color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;                /* title in black */
+  margin-bottom: 3px;         /* tight before “Presented at” */
 }
 
-/* “Job Market Paper” = same size as description, italic */
+/* “Job Market Paper” label: same size as description, italic */
 .jlabel {
-    font-style: italic;
-    font-size: 1rem;    /* match description size */
-    color: #555;        /* slightly softer than pure black */
-    margin-left: 6px;
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+  margin-left: 6px;
 }
 
-/* Link tag next to title */
-.plink {
-    margin-left: 6px;
+/* Presented at: line (between title and abstract) */
+.presented {
+  font-size: 1rem;
+  font-style: italic;
+  color: #444;                /* dark gray */
+  margin: 0 0 3px 0;          /* no extra space above; tiny space below */
 }
-.plink a {
-    color: #008cba;
-    text-decoration: none;
-}
+
+/* Link next to title */
+/* To make the brackets blue too, wrap them inside the <a> (see HTML note below) */
+.plink { margin-left: 6px; }
+.plink a { color: #008cba; text-decoration: none; }
 .plink a:hover { text-decoration: underline; }
 
-/* Abstract toggle closer to the title */
+/* Abstract toggle (closer to previous line) */
 .abstract summary {
-    cursor: pointer;
-    color: #008cba;
-    font-weight: 500;
-    display: inline-block;   /* sit tight under/near title */
-    margin-top: 2px;         /* was 8px */
-    margin-bottom: 0;
+  cursor: pointer;
+  color: #008cba;             /* blue label */
+  font-weight: 500;
+  margin-top: 2px;            /* very close to “Presented at” */
+  margin-bottom: 0;
 }
 .abstract summary:hover { text-decoration: underline; }
 
-/* Abstract text (when opened) in dark gray */
+/* Abstract text (when open) back to dark gray for readability */
 .abstract div {
-    margin-top: 6px;   /* a touch of space under the summary */
-    color: #444;       /* dark gray */
+  margin-top: 4px;
+  color: #444;
 }
 
-/* Paper spacing */
-.paper { margin-bottom: 22px; }
-
-/* Presented at: line under job market paper label */
-.presented {
-  font-size: 1rem;          /* same size as description */
-  font-style: italic;       /* cursive look */
-  color: #444;              /* dark gray */
-  margin: 4px 0 6px 0;      /* small spacing above/below */
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .container { margin-top: 40px; }
+  .content { flex-direction: column; align-items: center; text-align: center; }
+  .description { max-width: 100%; }
+  .profile img { width: 140px; height: 140px; margin-bottom: 16px; }
+  .papers { text-align: left; }
 }
-
-/* tighten spacing so “Abstract” sits closer to that line */
-.abstract summary {
-  margin-top: 4px;          /* was bigger before */
-}
-
-/* === Keep your existing base/body/nav/responsive rules as-is === */

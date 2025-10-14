@@ -258,7 +258,7 @@ details[open] summary::before { transform: rotate(90deg); }
   font-weight: normal !important;  /* force normal weight */
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 20px;               /* keep your indent */
+  margin-left: 18px;               /* keep your indent */
 }
 
 .abstract summary:hover {

@@ -133,11 +133,13 @@ body {
   font-size: 0.95rem;
   color: #000;
   margin-left: var(--subindent);
+  margin-bottom: 2px;
 }
 .coauthors a {
   font-style: italic;
   color: #008cba;
   text-decoration: none;
+  margin-bottom: 2px;
 }
 .coauthors a:hover { text-decoration: underline; }
 

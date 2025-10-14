@@ -1,102 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Ana Paula Franco</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Ana Paula Franco</title>
+    
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <main class="wrap">
-    <!-- LEFT COLUMN -->
-    <aside class="left">
-      <h1 class="name">Ana Paula Franco</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="franco-cv.pdf" target="_blank" class="nav-link">CV</a>
+    </nav>
 
-      <img src="lima.jpeg" alt="Ana Paula Franco" class="headshot" />
+    <!-- Header Section (Name at the Top) -->
+    <header class="header">
+        <h1>Ana Paula Franco</h1>
+    </header>
 
-      <div class="affil">
-        <p>PhD Student</p>
-        <p>Department of Economics</p>
-        <p>University of Michigan</p>
-        <p>Ann Arbor, MI</p>
-      </div>
+    <!-- Main Content: Profile Image + Description (Centered) -->
+    <main class="container">
+        <div class="content">
+            <!-- Left: Profile Image -->
+            <div class="profile">
+                <img src="lima.jpeg" alt="Your Profile Picture">
+            </div>
+            
+            <!-- Right: Description -->
+            <div class="description">
+    <p>Welcome! I'm a PhD student in Economics at the University of Michigan.</p>
+    
+    <p>My research interests are in public finance, with a focus on optimal taxation. I combine theory and econometric methods to design tax policies that address real-world complexities, such as tax evasion and large informal economies..</p>
 
-      <nav class="links">
-        <a href="franco-cv.pdf" target="_blank" rel="noopener">CV</a> |
-        <a href="mailto:apfranco@umich.edu">Email</a> |
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google&nbsp;Scholar</a> |
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> |
-        <a href="https://x.com/" target="_blank" rel="noopener">X (Twitter)</a>
-      </nav>
-    </aside>
+    <p>You can contact me at <a href="mailto:apfranco@umich.edu">apfranco@umich.edu</a>.</p>
+</div>
+        </div>
+    </main>
 
-    <!-- RIGHT COLUMN -->
-    <section class="right">
-      <p>
-        Hello! I am an economist studying questions in Public Finance and Development.
-        I focus on optimal taxation and the design of policies under evasion and informality.
-      </p>
-      <p>
-        You can reach me at <a href="mailto:apfranco@umich.edu">apfranco@umich.edu</a>.
-      </p>
-
-      <h2>Research Papers</h2>
-
-      <!-- Paper 1 -->
-      <article class="paper">
-        <h3>
-          Payments Under the Table and Optimal Income Taxation
-          <span class="jlabel">Job Market Paper</span>
-          <span class="plink">[<a href="paper1.pdf" target="_blank" rel="noopener">Link</a>]</span>
-        </h3>
-        <details class="abstract">
-          <summary>Abstract</summary>
-          <div>
-            I develop a model where firms and workers may underreport wages (PUT). A corporate
-            tax alters the classic optimal income tax formula via a fiscal externality and by
-            lowering the ETI when it discourages PUT. Using matched administrative and survey
-            data from Peru, I show PUT is common and declines when the corporate tax rises.
-          </div>
-        </details>
-      </article>
-
-      <!-- Paper 2 -->
-      <article class="paper">
-        <h3>
-          The Incidence of Distortions
-          <span class="plink">[<a href="paper2.pdf" target="_blank" rel="noopener">Link</a>]</span>
-        </h3>
-        <p class="coauthors">
-          with <em>Coauthor A</em>, <em>Coauthor B</em>, and <em>Coauthor C</em>
-        </p>
-        <details class="abstract">
-          <summary>Abstract</summary>
-          <div>
-            One-paragraph summary of the second paper goes here. Keep it concise.
-          </div>
-        </details>
-      </article>
-
-      <h2>Research in Progress</h2>
-      <article class="paper">
-        <h3>Working Title with Coauthor(s)</h3>
-        <details class="abstract">
-          <summary>Short blurb</summary>
-          <div>One sentence on scope, data, and what you’re estimating.</div>
-        </details>
-      </article>
-
-      <h2>Publications</h2>
-      <ul class="pubs">
-        <li>
-          <strong>Published Paper Title</strong> with Coauthor(s).
-          <em>Journal Name</em>, 2024.
-          <a href="pub1.pdf" target="_blank" rel="noopener">Paper</a>
-        </li>
-      </ul>
-    </section>
-  </main>
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>

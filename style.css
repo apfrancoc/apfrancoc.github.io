@@ -88,33 +88,45 @@ body {
 }
 
 /* Title */
+/* Paper title line */
 .paper h3 {
   font-size: 1rem;
   font-weight: 600;
   color: #000;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
+  display: inline; /* allow inline link */
 }
 
-/* Line under the title for “Job Market Paper” + [Draft] */
-.paper .meta-line {
+/* Keep Job Market Paper below title */
+.meta-line {
   margin: 0 0 3px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   align-items: baseline;
 }
+
+/* Job Market Paper label below title */
 .jlabel {
   font-style: italic;
-  font-size: 1rem;            /* same as body */
+  font-size: 1rem;
   color: #555;
+  display: block;  /* ensures it's below title line */
+  margin-top: 2px;
 }
-.plink { /* keep small gap from label */ }
-.plink a { color: #008cba; text-decoration: none; }
+
+/* [Draft] — blue link stays inline with title */
+.plink a {
+  color: #008cba;
+  text-decoration: none;
+  margin-left: 6px;
+}
 .plink a:hover { text-decoration: underline; }
+
 
 /* Presented at: normal (not italic), slightly smaller, tight before Abstract */
 .presented {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-style: normal;
   color: #555;
   margin: 0 0 2px 0;

@@ -137,7 +137,7 @@ body {
   font-size: 0.95rem;
   font-style: normal;       /* base text (the 'with') not italic */
   color: #000;              /* 'with' is black */
-  margin: 2px 0 2px 0;
+  margin: 2px 0 0 0;
 }
 
 .coauthors a {

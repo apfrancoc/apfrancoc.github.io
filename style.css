@@ -1,3 +1,5 @@
+
+
 /* ---------- Base / reset ---------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -14,15 +16,16 @@ body {
 /* Remove nav if still defined somewhere */
 .navbar { display: none; }
 
-/* ---------- Header ---------- */
+/* ---------- Header (Name) ---------- */
 .header {
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 5px;
+  margin-top: 60px;       /* slightly lower than before (was 40px) */
+  margin-bottom: 8px;     /* tighter space before body text */
   color: #000;
 }
+
 
 /* ---------- Layout ---------- */
 .container {
@@ -70,15 +73,21 @@ body {
 }
 .buttons a:hover { text-decoration: underline; }
 
+
+
 /* ---------- Description (right column) ---------- */
 .description {
   text-align: left;
   max-width: 640px;
   color: #444;
   margin-left: 20px;
+  margin-bottom: 30px;     /* adds more space before Working Papers */
 }
 .description p:first-child { margin-top: 0; }
 .description p { margin-bottom: 18px; }
+
+
+/* ---------- Papers ---------- */
 
 /* ---------- Papers ---------- */
 .papers { margin-top: 40px; }
@@ -88,7 +97,9 @@ body {
   color: #000;
   margin-bottom: 10px;
 }
-
+.papers {
+  margin-top: 20px;        /* extra cushion from description (was 40px, now more natural) */
+}
 .paper { margin-bottom: 16px; color: #000; }
 
 .paper h3 {

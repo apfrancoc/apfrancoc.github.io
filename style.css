@@ -227,14 +227,14 @@ details[open] summary::before { transform: rotate(90deg); }
   margin-top: 3px;
   color: #444;
   font-size: 0.95rem;   /* slightly smaller text */
-  margin-left: 20px;    /* keep the same indent */
+  margin-left: 18px;    /* keep the same indent */
 }
 
 /* Indent coauthors, presented, and abstract lines */
 .presented,
 .coauthors,
 .abstract {
-  margin-left: 20px;   /* subtle indent to the right */
+  margin-left: 18px;   /* subtle indent to the right */
 }
 
 /* Tighten Abstract spacing again (keep compact look) */

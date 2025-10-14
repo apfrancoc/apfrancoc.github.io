@@ -1,132 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Ana Paula Franco</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Ana Paula Franco</title>
+    
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Top bar -->
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">
-        <img src="headshot.jpg" alt="Portrait of Ana Paula Franco" class="avatar">
-        <div>
-          <h1 class="name">Ana Paula Franco</h1>
-          <p class="tagline">PhD student in Economics · University of Michigan</p>
-          <nav class="links">
-            <a href="franco-cv.pdf" target="_blank" rel="noopener">CV</a>
-            <a href="mailto:apfranco@umich.edu">Email</a>
-            <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/" target="_blank" rel="noopener">X</a>
-          </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="franco-cv.pdf" target="_blank" class="nav-link">CV</a>
+    </nav>
+
+    <!-- Header Section (Name at the Top) -->
+    <header class="header">
+        <h1>Ana Paula Franco</h1>
+    </header>
+
+    <!-- Main Content: Profile Image + Description (Centered) -->
+    <main class="container">
+        <div class="content">
+            <!-- Left: Profile Image -->
+            <div class="profile">
+                <img src="lima.jpeg" alt="Your Profile Picture">
+            </div>
+            
+            <!-- Right: Description -->
+            <div class="description">
+    <p>Welcome! I'm a PhD student in Economics at the University of Michigan.</p>
+    
+    <p>My research interests are in public finance, with a focus on optimal taxation. I combine theory and econometric methods to design tax policies that address real-world complexities, such as tax evasion and large informal economies..</p>
+
+    <p>You can contact me at <a href="mailto:apfranco@umich.edu">apfranco@umich.edu</a>.</p>
+</div>
         </div>
-      </div>
-    </div>
-  </header>
+    </main>
 
-  <!-- About -->
-  <section class="section">
-    <div class="container prose">
-      <p>
-        I study public finance with a focus on optimal taxation. I combine theory and econometrics to
-        understand how policies work when there is evasion and informality.
-      </p>
-      <p>
-        You can reach me at <a href="mailto:apfranco@umich.edu">apfranco@umich.edu</a>.
-      </p>
-    </div>
-  </section>
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
 
-  <!-- Working Papers -->
-  <section class="section">
-    <div class="container">
-      <h2>Working Papers</h2>
-
-      <article class="paper">
-        <div class="paper-meta">
-          <h3 class="paper-title">Payments Under the Table and Optimal Income Taxation</h3>
-          <div class="paper-links">
-            <a href="paper1.pdf" target="_blank" rel="noopener">Paper</a>
-            <a href="slides1.pdf" target="_blank" rel="noopener">Slides</a>
-            <a href="appendix1.pdf" target="_blank" rel="noopener">Appendix</a>
-          </div>
-        </div>
-        <!-- Collapsible abstract -->
-        <details class="abstract">
-          <summary>
-            Abstract
-            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </summary>
-          <div class="abstract-body">
-            I develop a model where firms and workers may underreport wages (PUT). A corporate tax
-            changes the classic optimal income tax formula through a fiscal externality and by reducing
-            the elasticity of taxable income when it discourages PUT. Using matched administrative and
-            survey data from Peru, I show PUT is common and decreases when the corporate tax rises.
-          </div>
-        </details>
-      </article>
-
-      <article class="paper">
-        <div class="paper-meta">
-          <h3 class="paper-title">Title of Second Working Paper</h3>
-          <div class="paper-links">
-            <a href="paper2.pdf" target="_blank" rel="noopener">Paper</a>
-            <a href="slides2.pdf" target="_blank" rel="noopener">Slides</a>
-          </div>
-        </div>
-        <details class="abstract">
-          <summary>
-            Abstract
-            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </summary>
-          <div class="abstract-body">
-            One paragraph summary of the paper goes here. Keep it short and clear.
-          </div>
-        </details>
-      </article>
-    </div>
-  </section>
-
-  <!-- Research in Progress -->
-  <section class="section">
-    <div class="container">
-      <h2>Research in Progress</h2>
-
-      <article class="paper">
-        <h3 class="paper-title">Working Title with Coauthor(s)</h3>
-        <details class="abstract">
-          <summary>
-            Short blurb
-            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </summary>
-          <div class="abstract-body">
-            One-sentence scope and what you’re estimating/building.
-          </div>
-        </details>
-      </article>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="y"></span> Ana Paula Franco</p>
-    </div>
-  </footer>
-
-  <script>
-    // Year in footer
-    document.getElementById('y').textContent = new Date().getFullYear();
-    // Add "open" class when <details> expanded (for CSS caret rotation/animation)
-    document.querySelectorAll('details').forEach(d=>{
-      d.addEventListener('toggle',()=> d.classList.toggle('open', d.open));
-    });
-  </script>
 </body>
 </html>

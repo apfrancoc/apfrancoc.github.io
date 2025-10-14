@@ -64,25 +64,23 @@ body {
 .buttons {
   text-align: center;
   margin-top: 6px;
-  font-size: 0.9rem; /* slightly smaller than body text */
+  font-size: 0.9rem;
   color: #444;
 }
 
 .buttons a {
-  font-weight: bold;         /* make CV and Email bold */
-  color: #008cba;            /* same blue as links */
+  color: #008cba;            /* blue for actual links */
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 3px;
 }
 
 .buttons a:hover {
   text-decoration: underline;
 }
 
-/* make the email itself (if displayed) smaller and lighter */
-.buttons span {
-  font-size: 0.85rem;
-  color: #555;
+.buttons strong {
+  font-weight: bold;         /* make “CV” and “Email” bold */
+  color: #000;               /* keep them black */
 }
 
 

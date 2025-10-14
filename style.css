@@ -121,7 +121,7 @@ body {
 }
 
 /* ---------- Indents for sublines ---------- */
-:root { --subindent: 10px; } /* smaller indent for cleaner alignment */
+:root { --subindent: 8px; } /* smaller indent for cleaner alignment */
 
 .presented {
   font-size: 0.85rem;

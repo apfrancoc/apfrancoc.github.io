@@ -126,7 +126,7 @@ body {
 
 /* Presented at: normal (not italic), slightly smaller, tight before Abstract */
 .presented {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-style: normal;
   color: #555;
   margin: 0 0 0 0;
@@ -155,11 +155,11 @@ body {
   cursor: pointer;
   color: #008cba;
   font-weight: 500;
-  margin-top: 1px;            /* very close to Presented at */
+  margin-top: 0;            /* very close to Presented at */
   margin-bottom: 0;
   list-style: none;           /* hide default disclosure triangle */
   position: relative;
-  padding-left: 18px;         /* room for custom arrow */
+  padding-left: 20px;         /* room for custom arrow */
 }
 .abstract summary::before {
   content: "▶";
@@ -173,7 +173,7 @@ body {
 details[open] summary::before { transform: rotate(90deg); }
 
 .abstract div {
-  margin-top: 1px;
+  margin-top:0;
   color: #444;                /* abstract text dark gray */
 }
 

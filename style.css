@@ -1,169 +1,87 @@
-/* General Page Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: #333; /* base gray text */
-    font-size: 16px;
-    line-height: 1.6;
-}
+/* === Sizing + width tweaks === */
 
-/* Remove default margin & padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Navigation Bar (top right) */
-.navbar {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #008cba;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: #005f73;
-}
-
-/* Header (name centered) */
-.header {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-top: 120px;
-    margin-bottom: 20px;
-    color: #000; /* name black */
-}
-
-/* Main Container */
+/* Wider page so abstracts read better */
 .container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
-    max-width: 900px;
+    /* was max-width: 900px; */
+    max-width: 1100px;  /* try 1100–1200 if you want even wider */
     margin: 50px auto 0 auto;
     padding: 20px;
 }
 
-/* Content: image left, text right */
-.content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+/* Name size = current Working Papers size */
+.header {
+    text-align: center;
+    font-size: 1.25rem; /* was 1.8rem */
+    font-weight: bold;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    color: #000;
 }
 
-/* Profile Image */
-.profile img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Description text (gray) */
-.description {
-    margin-left: 30px;
-    max-width: 520px;
-    text-align: left;
-    color: #444; /* darker gray for bio */
-}
-
-.description p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 18px;
-}
-
-/* Research Papers Section */
-.papers {
-    margin-top: 40px;
-}
-
+/* Working Papers a bit smaller */
 .papers h2 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;  /* was 1.25rem */
     font-weight: bold;
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
-    margin-bottom: 20px;
-    color: #000; /* black title */
+    margin-bottom: 16px; /* slightly tighter */
+    color: #000;
 }
 
-.paper {
-    margin-bottom: 25px;
-    color: #000; /* black main text for papers */
+/* Optional: let the text column breathe a little more */
+.description {
+    margin-left: 30px;
+    max-width: 640px; /* was 520px */
+    text-align: left;
+    color: #444;
 }
 
+/* === Paper block styles === */
+
+/* Title line + labels */
 .paper h3 {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 5px;
-    color: #000; /* paper title black */
+    margin-bottom: 2px; /* tighter so 'Abstract' can sit closer */
+    color: #000;
 }
 
+/* “Job Market Paper” = same size as description, italic */
 .jlabel {
     font-style: italic;
-    color: #777;
+    font-size: 1rem;    /* match description size */
+    color: #555;        /* slightly softer than pure black */
     margin-left: 6px;
 }
 
+/* Link tag next to title */
+.plink {
+    margin-left: 6px;
+}
 .plink a {
     color: #008cba;
     text-decoration: none;
 }
+.plink a:hover { text-decoration: underline; }
 
-.plink a:hover {
-    text-decoration: underline;
-}
-
-/* Abstract dropdown */
+/* Abstract toggle closer to the title */
 .abstract summary {
     cursor: pointer;
     color: #008cba;
     font-weight: 500;
-    margin-top: 8px;
+    display: inline-block;   /* sit tight under/near title */
+    margin-top: 2px;         /* was 8px */
+    margin-bottom: 0;
 }
+.abstract summary:hover { text-decoration: underline; }
 
-.abstract summary:hover {
-    text-decoration: underline;
-}
-
-/* Abstract text when opened */
+/* Abstract text (when opened) in dark gray */
 .abstract div {
-    margin-top: 8px;
-    color: #444; /* dark gray for abstract text */
+    margin-top: 6px;   /* a touch of space under the summary */
+    color: #444;       /* dark gray */
 }
 
-/* Responsive layout */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+/* Paper spacing */
+.paper { margin-bottom: 22px; }
 
-    .profile img {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 20px;
-    }
-
-    .description {
-        margin-left: 0;
-    }
-
-    .papers {
-        text-align: left;
-    }
-}
+/* === Keep your existing base/body/nav/responsive rules as-is === */

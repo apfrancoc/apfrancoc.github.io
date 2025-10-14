@@ -60,19 +60,30 @@ body {
   margin-bottom: 12px;
 }
 
-/* CV | Email buttons */
+/* --- CV | Email line --- */
 .buttons {
   text-align: center;
-  margin-top: 4px;
-  font-size: 0.95rem;
+  margin-top: 6px;
+  font-size: 0.9rem; /* slightly smaller than body text */
+  color: #444;
 }
-.buttons a {
-  color: #008cba;
-  text-decoration: none;
-  margin: 0 4px;
-}
-.buttons a:hover { text-decoration: underline; }
 
+.buttons a {
+  font-weight: bold;         /* make CV and Email bold */
+  color: #008cba;            /* same blue as links */
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.buttons a:hover {
+  text-decoration: underline;
+}
+
+/* make the email itself (if displayed) smaller and lighter */
+.buttons span {
+  font-size: 0.85rem;
+  color: #555;
+}
 
 
 /* ---------- Description (right column) ---------- */

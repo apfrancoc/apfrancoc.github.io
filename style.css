@@ -124,7 +124,7 @@ body {
 :root { --subindent: 10px; } /* smaller indent for cleaner alignment */
 
 .presented {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #555;
   margin-left: var(--subindent);
   margin-bottom: 0;

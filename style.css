@@ -178,6 +178,23 @@ details[open] summary::before { transform: rotate(90deg); }
   margin-left: 16px; /* align under arrow text */
 }
 
+/* ---- Fix stubborn spacing above Abstract ---- */
+details.abstract {
+  margin-top: 0 !important;      /* removes built-in details margin */
+  padding-top: 0 !important;
+}
+
+.abstract summary {
+  margin-top: 0 !important;      /* extra assurance */
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.presented {
+  margin-bottom: 1px !important; /* super tight below “Presented at” */
+}
+
+
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {
   .container {

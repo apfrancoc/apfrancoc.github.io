@@ -84,4 +84,17 @@
 /* Paper spacing */
 .paper { margin-bottom: 22px; }
 
+/* Presented at: line under job market paper label */
+.presented {
+  font-size: 1rem;          /* same size as description */
+  font-style: italic;       /* cursive look */
+  color: #444;              /* dark gray */
+  margin: 4px 0 6px 0;      /* small spacing above/below */
+}
+
+/* tighten spacing so “Abstract” sits closer to that line */
+.abstract summary {
+  margin-top: 4px;          /* was bigger before */
+}
+
 /* === Keep your existing base/body/nav/responsive rules as-is === */

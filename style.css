@@ -236,7 +236,17 @@ html {
   outline: none;
 }
 
+/* Special color for [Slides] links */
+.slides-link a {
+  color: #c58f00;           /* gold / amber */
+  text-decoration: none;
+  font-weight: 600;          /* slight bold for emphasis */
+}
 
+.slides-link a:hover {
+  text-decoration: underline;
+  color: #a67500;            /* darker gold on hover */
+}
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {
   .container {

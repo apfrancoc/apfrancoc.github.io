@@ -132,7 +132,6 @@ body {
 .coauthors {
   font-size: 0.95rem;
   color: #000;
-  margin-left: var(--subindent);
   margin-bottom: 2px;
 }
 .coauthors a {

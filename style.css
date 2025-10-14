@@ -114,7 +114,7 @@ body {
 
 /* Presented at: normal (not italic), slightly smaller, tight before Abstract */
 .presented {
-  font-size: 0.95rem;
+  font-size: 0.7rem;
   font-style: normal;
   color: #555;
   margin: 0 0 2px 0;

@@ -194,6 +194,10 @@ details.abstract {
   margin-bottom: 1px !important; /* super tight below “Presented at” */
 }
 
+.coauthors {
+  margin-bottom: 1px !important;
+}
+
 
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {

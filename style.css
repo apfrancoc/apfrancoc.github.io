@@ -126,7 +126,6 @@ body {
 .presented {
   font-size: 0.85rem;
   color: #555;
-  margin-left: var(--subindent);
   margin-bottom: 0;
 }
 

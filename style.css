@@ -5,6 +5,8 @@ body {
     padding: 0;
     background-color: white;
     color: #333;
+    font-size: 15px; /* consistent size across everything */
+    line-height: 1.6;
 }
 
 /* Remove default margin & padding */
@@ -14,10 +16,9 @@ body {
     box-sizing: border-box;
 }
 
-/* Navigation Bar - Align to Right */
 /* Navigation Bar - Keep at the top right */
 .navbar {
-    position: fixed; /* Keep it at the top */
+    position: fixed;
     top: 20px;
     right: 20px;
     display: flex;
@@ -27,7 +28,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: #008cba;
-    font-size: 1.1rem;
+    font-size: 1rem; /* slightly smaller to match the rest */
     transition: color 0.3s;
 }
 
@@ -38,17 +39,17 @@ body {
 /* Header (Name at the Top) */
 .header {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    margin-top: 120px; /* Moves name closer to the top */
-    margin-bottom: 20px; /* Reduce space between name and description */
+    margin-top: 120px;
+    margin-bottom: 20px;
 }
 
-/* Main Container: Centers Everything */
+/* Main Container */
 .container {
     display: flex;
-    align-items: flex-start; /* Aligns content to the top */
-    justify-content: center; /* Centers horizontally */
+    align-items: flex-start;
+    justify-content: center;
     flex-direction: row;
     max-width: 900px;
     margin: 50px auto 0 auto;
@@ -64,8 +65,8 @@ body {
 
 /* Profile Image */
 .profile img {
-    width: 220px; /* Increase the width */
-    height: 220px; /* Increase the height */
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -77,11 +78,66 @@ body {
     text-align: left;
 }
 
-/* Adds spacing between paragraphs */
+/* Paragraphs and general text */
 .description p {
-    font-size: 1.1rem;
+    font-size: 1rem; /* same as papers */
     line-height: 1.6;
-    margin-bottom: 20px; /* Adds spacing between text */
+    margin-bottom: 20px;
+}
+
+/* Research Papers Section */
+.papers {
+    margin-top: 40px;
+}
+
+.papers h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.paper {
+    margin-bottom: 25px;
+}
+
+.paper h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.jlabel {
+    font-style: italic;
+    color: #777;
+    margin-left: 6px;
+}
+
+.plink a {
+    color: #008cba;
+    text-decoration: none;
+}
+
+.plink a:hover {
+    text-decoration: underline;
+}
+
+/* Abstract Dropdown */
+.abstract summary {
+    cursor: pointer;
+    color: #008cba;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.abstract summary:hover {
+    text-decoration: underline;
+}
+
+.abstract div {
+    margin-top: 8px;
+    color: #444;
 }
 
 /* Responsive Design */
@@ -100,5 +156,9 @@ body {
 
     .description {
         margin-left: 0;
+    }
+
+    .papers {
+        text-align: left;
     }
 }

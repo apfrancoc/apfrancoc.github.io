@@ -167,6 +167,7 @@ body {
   left: 0;
   top: 0;
   color: #008cba;
+  font-weight: normal;   /* remove bold */
   transition: transform .2s ease;
 }
 details[open] summary::before { transform: rotate(90deg); }

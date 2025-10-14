@@ -102,7 +102,7 @@ body {
 .plink a {
   color: #008cba;
   text-decoration: none;
-  margin-left: 6px;
+  margin-left: 4px;
 }
 .plink a:hover { text-decoration: underline; }
 

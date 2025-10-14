@@ -1,15 +1,19 @@
 /* ---------- Base ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: Arial, sans-serif;
-  background: #fff;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
   color: #333;
   font-size: 16px;
   line-height: 1.6;
 }
 
-/* ---------- Nav (fixed, top-right) ---------- */
+/* ---------- Navigation ---------- */
 .navbar {
   position: fixed;
   top: 20px;
@@ -17,32 +21,39 @@ body {
   display: flex;
   gap: 20px;
 }
+
 .nav-link {
+  text-decoration: none;
   color: #008cba;
   font-size: 1rem;
-  text-decoration: none;
-  transition: color .2s;
+  transition: color 0.3s;
 }
-.nav-link:hover { text-decoration: underline; }
 
-/* ---------- Header (name) ---------- */
-/* Smaller name as requested */
+.nav-link:hover {
+  color: #005f73;
+}
+
+/* ---------- Header (Name) ---------- */
 .header {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* smaller name */
   font-weight: bold;
   margin-top: 120px;
   margin-bottom: 15px;
   color: #000;
 }
 
-/* ---------- Main layout ---------- */
-/* Wider so abstracts read better */
+/* ---------- Main Container ---------- */
 .container {
-  max-width: 1100px;          /* bump to 1200 if you want even wider */
-  margin: 50px auto 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 1100px; /* wider for readability */
+  margin: 50px auto 0 auto;
   padding: 20px;
 }
+
 .content {
   display: flex;
   align-items: flex-start;
@@ -50,26 +61,34 @@ body {
   gap: 30px;
 }
 
-/* Left: profile image */
+/* ---------- Profile Image ---------- */
 .profile img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%; /* circular photo */
   object-fit: cover;
 }
 
-/* Right: description + papers */
+/* ---------- Description ---------- */
 .description {
-  max-width: 640px;           /* more breathing room than before */
-  color: #444;                /* dark gray for description text */
+  margin-left: 30px;
+  max-width: 640px;
   text-align: left;
+  color: #444; /* dark gray text */
 }
-.description p { margin-bottom: 18px; }
 
-/* ---------- Papers ---------- */
-.papers { margin-top: 40px; }
+.description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
 
-/* Working Papers header: no underline, a bit smaller */
+/* ---------- Papers Section ---------- */
+.papers {
+  margin-top: 40px;
+}
+
+/* Working Papers heading (no underline) */
 .papers h2 {
   font-size: 1.1rem;
   font-weight: bold;
@@ -81,19 +100,19 @@ body {
 
 /* Each paper block */
 .paper {
-  margin-bottom: 16px;        /* tighter between papers */
-  color: #000;                /* main paper text in black */
+  margin-bottom: 16px;
+  color: #000; /* main paper text in black */
 }
 
-/* Title line */
+/* Paper title */
 .paper h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #000;                /* title in black */
-  margin-bottom: 3px;         /* tight before “Presented at” */
+  color: #000;
+  margin-bottom: 3px; /* tighter before “Presented at” */
 }
 
-/* “Job Market Paper” label: same size as description, italic */
+/* “Job Market Paper” label */
 .jlabel {
   font-style: italic;
   font-size: 1rem;
@@ -101,49 +120,66 @@ body {
   margin-left: 6px;
 }
 
-/* Presented at: line (between title and abstract) */
+/* “Presented at:” line */
 .presented {
   font-size: 1rem;
   font-style: italic;
-  color: #444;                /* dark gray */
-  margin: 0 0 3px 0;          /* no extra space above; tiny space below */
+  color: #444;
+  margin: 0 0 3px 0; /* tight spacing */
 }
 
-/* Link next to title */
-/* To make the brackets blue too, wrap them inside the <a> (see HTML note below) */
-.plink { margin-left: 6px; }
-.plink a { color: #008cba; text-decoration: none; }
-.plink a:hover { text-decoration: underline; }
+/* [Draft] link — brackets also blue */
+.plink {
+  margin-left: 6px;
+}
 
-/* Abstract toggle (closer to previous line) */
+.plink a {
+  color: #008cba;
+  text-decoration: none;
+}
+
+.plink a:hover {
+  text-decoration: underline;
+}
+
+/* “Abstract” dropdown toggle */
 .abstract summary {
   cursor: pointer;
-  color: #008cba;             /* blue label */
+  color: #008cba;
   font-weight: 500;
-  margin-top: 2px;            /* very close to “Presented at” */
+  margin-top: 2px; /* very close to Presented at */
   margin-bottom: 0;
 }
-.abstract summary:hover { text-decoration: underline; }
 
-/* Abstract text (when open) back to dark gray for readability */
+.abstract summary:hover {
+  text-decoration: underline;
+}
+
+/* Abstract text (when opened) */
 .abstract div {
   margin-top: 4px;
   color: #444;
 }
 
-/* ---------- Responsive ---------- */
+/* ---------- Responsive Design ---------- */
 @media (max-width: 768px) {
-  .container { margin-top: 40px; }
-  .content { flex-direction: column; align-items: center; text-align: center; }
-  .description { max-width: 100%; }
- .profile img {
-  width: 180px;          /* smaller: try 160–200px range */
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-  .papers { text-align: left; }
-}
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-/* Profile Image — resize back to normal */
+  .profile img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+  }
 
+  .description {
+    margin-left: 0;
+  }
+
+  .papers {
+    text-align: left;
+  }
+}

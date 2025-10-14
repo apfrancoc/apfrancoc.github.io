@@ -61,32 +61,39 @@ body {
 }
 /* --- CV | Email line --- */
 .buttons {
-  text-align: left;         /* left-align to match description */
+  text-align: left;
   font-size: 0.9rem;
   color: #444;
   margin-top: 6px;
 }
 
-.buttons a {
-  color: #008cba;           /* blue links */
+/* “CV” link — bold + blue */
+.buttons strong a {
+  font-weight: bold;
+  color: #008cba;        /* blue like your other links */
   text-decoration: none;
-  font-weight: normal;      /* email not bold */
+}
+
+.buttons strong a:hover {
+  text-decoration: underline;
+}
+
+/* “Email:” label — bold black */
+.buttons strong {
+  font-weight: bold;
+  color: #000;
+}
+
+/* email address — normal blue, not bold */
+.buttons a {
+  color: #008cba;
+  text-decoration: none;
+  font-weight: normal;
   margin: 0 3px;
 }
 
 .buttons a:hover {
   text-decoration: underline;
-}
-
-/* make CV bold even though it’s a link */
-.buttons strong a {
-  font-weight: bold;
-  color: #000;              /* black for bold CV link */
-}
-
-.buttons strong {
-  font-weight: bold;        /* “Email:” label also bold */
-  color: #000;
 }
 
 /* ---------- Description (right column) ---------- */

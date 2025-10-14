@@ -7,19 +7,19 @@ body {
   color: #333;
   font-size: 16px;
   line-height: 1.6;
-  margin-top: 0;             /* start at top */
-  padding-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Kill nav if it still exists */
+/* Remove nav if still defined somewhere */
 .navbar { display: none; }
 
-/* ---------- Header (name) ---------- */
+/* ---------- Header ---------- */
 .header {
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
-  margin-top: 40px;          /* closer to top */
+  margin-top: 40px;
   margin-bottom: 15px;
   color: #000;
 }
@@ -41,12 +41,12 @@ body {
   gap: 30px;
 }
 
-/* Left column: photo + links */
+/* ---------- Profile (left column) ---------- */
 .profile {
   display: flex;
   flex-direction: column;
-  align-items: center;       /* center the photo and links */
-  flex: 0 0 auto;            /* don’t stretch */
+  align-items: center;
+  flex: 0 0 auto;
 }
 
 .profile img {
@@ -54,11 +54,10 @@ body {
   height: 170px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* Garg-style links under photo */
+/* CV | Email buttons */
 .buttons {
   text-align: center;
   margin-top: 4px;
@@ -71,14 +70,14 @@ body {
 }
 .buttons a:hover { text-decoration: underline; }
 
-/* Right column: bio + papers */
+/* ---------- Description (right column) ---------- */
 .description {
   text-align: left;
   max-width: 640px;
-  color: #444;               /* dark gray for bio */
+  color: #444;
   margin-left: 20px;
 }
-.description p:first-child { margin-top: 0; }  /* remove default top gap */
+.description p:first-child { margin-top: 0; }
 .description p { margin-bottom: 18px; }
 
 /* ---------- Papers ---------- */
@@ -87,24 +86,27 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   color: #000;
-  margin-bottom: 10px;       /* no underline */
+  margin-bottom: 10px;
 }
 
-/* Each paper block */
 .paper { margin-bottom: 16px; color: #000; }
 
-/* Title line: keep [Draft] inline with title */
 .paper h3 {
   font-size: 1rem;
   font-weight: 600;
   color: #000;
+  display: inline;
   margin-bottom: 2px;
-  display: inline;           /* allows [Draft] on same line */
 }
-.plink a { color: #008cba; text-decoration: none; margin-left: 6px; }
+
+.plink a {
+  color: #008cba;
+  text-decoration: none;
+  margin-left: 6px;
+}
 .plink a:hover { text-decoration: underline; }
 
-/* Line under title: “Job Market Paper” alone */
+/* “Job Market Paper” on separate line */
 .meta-line {
   margin: 0 0 3px 0;
   display: flex;
@@ -112,57 +114,66 @@ body {
   gap: 8px;
   align-items: baseline;
 }
-.jlabel { font-style: italic; font-size: 1rem; color: #555; }
+.jlabel {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+}
 
-/* Sub-lines (indent kept subtle and consistent) */
-:root { --subindent: 12px; }   /* control indent here */
+/* ---------- Indents for sublines ---------- */
+:root { --subindent: 10px; } /* smaller indent for cleaner alignment */
 
 .presented {
   font-size: 0.95rem;
   color: #555;
-  margin: 0 0 0  var(--subindent);
+  margin-left: var(--subindent);
+  margin-bottom: 0;
 }
 
 .coauthors {
   font-size: 0.95rem;
-  color: #000;                 /* “with” in black */
-  margin: 0 0 0  var(--subindent);
+  color: #000;
+  margin-left: var(--subindent);
 }
 .coauthors a {
-  font-style: italic;          /* only names italic */
-  color: #008cba;              /* same blue as [Draft] */
+  font-style: italic;
+  color: #008cba;
   text-decoration: none;
 }
 .coauthors a:hover { text-decoration: underline; }
 
-/* Abstract toggle (indented slightly, not bold, with arrow) */
-.abstract { margin-left: var(--subindent); }
+/* ---------- Abstract toggle ---------- */
+.abstract {
+  margin-left: var(--subindent);
+}
+
 .abstract summary {
   cursor: pointer;
   color: #008cba;
-  font-weight: normal !important;  /* ensure not bold */
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
   position: relative;
-  padding-left: 18px;              /* room for arrow */
+  padding-left: 16px;
 }
+
 .abstract summary::before {
   content: "▶";
   position: absolute;
   left: 0;
   top: 0;
   color: #008cba;
+  font-weight: normal;
   transition: transform .2s ease;
 }
 details[open] summary::before { transform: rotate(90deg); }
 
-/* Abstract body (slightly smaller + same indent) */
 .abstract div {
   margin-top: 3px;
   color: #444;
   font-size: 0.95rem;
-  margin-left: 18px;              /* align with text after arrow */
+  margin-left: 16px; /* align under arrow text */
 }
 
 /* ---------- Mobile ---------- */

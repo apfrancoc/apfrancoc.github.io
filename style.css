@@ -175,6 +175,51 @@ body {
   color: #444;
 }
 
+/* Put JMP + [Draft] on its own line under the title */
+.paper .meta-line {
+  margin: 0 0 4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+}
+
+/* Job Market Paper label (own line, same size as body, italic) */
+.jlabel {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* [Draft] (brackets blue) */
+.plink a {
+  color: #008cba;
+  text-decoration: none;
+}
+.plink a:hover { text-decoration: underline; }
+
+/* Presented at: normal (not italic), a bit smaller, tight */
+.presented {
+  font-size: 0.95rem;
+  font-style: normal;
+  color: #555;
+  margin: 0 0 2px 0;   /* very little space before Abstract */
+}
+
+/* Coauthors line like Garg's (blue + italic, starts with "with …") */
+.coauthors {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #2563eb;      /* blue */
+  margin: 2px 0 2px 0;
+}
+.coauthors a { color: inherit; text-decoration: none; }
+.coauthors a:hover { text-decoration: underline; }
+
+/* Abstract spacing tighter + arrow stays */
+.abstract summary { margin-top: 1px; }
+.abstract div { margin-top: 3px; }
+
 /* ---------- Responsive (mobile) ---------- */
 @media (max-width: 768px) {
   .container {

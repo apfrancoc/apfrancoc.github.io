@@ -172,9 +172,12 @@ body {
 }
 details[open] summary::before { transform: rotate(90deg); }
 
+/* Abstract text (when opened) */
 .abstract div {
-  margin-top:0;
-  color: #444;                /* abstract text dark gray */
+  margin-top: 3px;
+  color: #444;
+  font-size: 0.95rem;   /* slightly smaller text */
+  margin-left: 20px;    /* keep the same indent */
 }
 
 /* Indent coauthors, presented, and abstract lines */

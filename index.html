@@ -1,88 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.5">
-  <title>Ana Paula Franco</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
+<main class="container">
+  <div class="content">
 
-<body>
-
-  <!-- Header Section -->
-  <header class="header">
-    <h1>Ana Paula Franco</h1>
-  </header>
-
-  <!-- Main Content -->
-  <main class="container">
-    <div class="content">
-
-      <!-- Left: Profile Image + Buttons -->
-      <div class="profile">
-        <img src="lima.jpeg" alt="Ana Paula Franco">
-        <div class="buttons">
+    <!-- Left: Profile Image + Buttons -->
+    <div class="profile">
+      <img src="lima.jpeg" alt="Ana Paula Franco">
+      <div class="buttons">
         <a href="franco-cv.pdf" target="_blank">CV</a> |
         <a href="mailto:apfranco@umich.edu">Email</a>
       </div>
+    </div> <!-- ✅ CLOSE .profile HERE -->
+
+    <!-- Right: Description and Research Papers -->
+    <div class="description">
+      <p>Welcome! I'm a PhD student in Economics at the University of Michigan.</p>
+
+      <p>My research interests are in public finance, with a focus on optimal taxation.
+        I combine theory and econometric methods to design tax policies that address real-world complexities,
+        such as tax evasion and large informal economies.</p>
+
+      <p>You can contact me at
+        <a href="mailto:apfranco@umich.edu">apfranco@umich.edu</a>.
+      </p>
+
+      <section class="papers">
+        <h2>Working Papers</h2>
+
+        <article class="paper">
+          <h3>Payments Under the Table: Estimation and Implications for Tax Policy
+            <span class="plink"><a href="paper1.pdf" target="_blank" rel="noopener">[Draft]</a></span>
+          </h3>
+          <div class="meta-line">
+            <span class="jlabel">Job Market Paper</span>
+          </div>
+          <p class="presented">
+            Presented at (scheduled*): RIDGE Public Economics 2025, IIPF Annual Congress 2025,
+            NBER Summer Institute 2025, NTA Annual Conference 2025*, NEUDC 2025*
+          </p>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <div> This paper studies how firm–worker agreements to underreport wages affect tax policy design.
+            In most tax systems, firms act as third-party reporters to limit evasion, but this mechanism
+            weakens when part of compensation is paid off the books—a practice referred to here as
+            payments under the table (PUT).
       
-      <!-- Right: Description and Research Papers -->
-      <div class="description">
+            I develop a model of optimal income taxation in an economy where firms and workers may engage
+            in PUT and a corporate tax is also in place. The model shows that when PUT are prevalent, the
+            corporate tax modifies the classic optimal income tax formula through two channels: a positive
+            fiscal externality, since PUT are not deductible from firms’ taxable profits, and a reduction
+            in the elasticity of taxable income (ETI), as higher corporate taxation discourages firms from
+            paying under the table and narrows the scope for workers to evade. Using administrative and
+            survey data from Peru—linked through optimal transport—I find that PUT are widespread and more
+            common among higher-income workers. Exploiting a staggered tax reform, I further show that the
+            ETI declines when the corporate tax rate increases, consistent with the model’s theoretical
+            predictions.
+            </div>
+          </details>
+        </article>
 
-        <p>Welcome! I'm a PhD student in Economics at the University of Michigan.</p>
-
-        <p>My research interests are in public finance, with a focus on optimal taxation.
-          I combine theory and econometric methods to design tax policies that address real-world complexities,
-          such as tax evasion and large informal economies.</p>
-
-        <p>You can contact me at
-          <a href="mailto:apfranco@umich.edu">apfranco@umich.edu</a>.
-        </p>
-
-        <!-- Research Papers section now inside the same column -->
-        <section class="papers">
-          <h2>Working Papers</h2>
-
-          <article class="paper">
-  <h3>Payments Under the Table: Estimation and Implications for Tax Policy</h3>
-  <span class="plink"><a href="paper1.pdf" target="_blank" rel="noopener">[Draft]</a></span>
-  <div class="meta-line">
-    <span class="jlabel">Job Market Paper</span>
-  </div>
-
-  <p class="presented">
-    Presented at (scheduled*): RIDGE Public Economics 2025, IIPF Annual Congress 2025, NBER Summer Institute 2025, NTA Annual Conference 2025*, NEUDC 2025*
-  </p>
-
-  <details class="abstract">
-    <summary>Abstract</summary>
-    <div>
-       This paper studies how firm–worker agreements to underreport wages affect tax policy design.
-      In most tax systems, firms act as third-party reporters to limit evasion, but this mechanism
-      weakens when part of compensation is paid off the books—a practice referred to here as
-      payments under the table (PUT).
-
-      I develop a model of optimal income taxation in an economy where firms and workers may engage
-      in PUT and a corporate tax is also in place. The model shows that when PUT are prevalent, the
-      corporate tax modifies the classic optimal income tax formula through two channels: a positive
-      fiscal externality, since PUT are not deductible from firms’ taxable profits, and a reduction
-      in the elasticity of taxable income (ETI), as higher corporate taxation discourages firms from
-      paying under the table and narrows the scope for workers to evade. Using administrative and
-      survey data from Peru—linked through optimal transport—I find that PUT are widespread and more
-      common among higher-income workers. Exploiting a staggered tax reform, I further show that the
-      ETI declines when the corporate tax rate increases, consistent with the model’s theoretical
-      predictions.
-    </div>
-  </details>
-</article>
-
-          <article class="paper">
-  <h3>Taxation of Couples: Payroll Tax and Transferable Benefits</h3>
-    <span class="plink"><a href="paper2.pdf" target="_blank" rel="noopener">[Draft]</a></span>
-  <details class="abstract">
-    <summary>Abstract</summary>
-    <div> This paper examines the optimal design of payroll taxes and social insurance in settings where
+        <article class="paper">
+          <h3>Taxation of Couples: Payroll Tax and Transferable Benefits
+            <span class="plink"><a href="paper2.pdf" target="_blank" rel="noopener">[Draft]</a></span>
+          </h3>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <div>This paper examines the optimal design of payroll taxes and social insurance in settings where
                 benefits are partially transferable across spouses. In many developing countries, one spouse can
                 work informally while accessing coverage through their partner’s formal job, creating household-
                 level distortions in labor supply. I develop a model in which couples choose formality jointly, and
@@ -95,21 +76,17 @@
                 while their spouses became more likely to work informally. These results suggest that both payroll
                 tax rates and benefit transferability should be set below current levels, and that ignoring household
                 interactions may lead to ineﬃcient tax and subsidy designs.</div>
-  </details>
-</article>
-          
-        
+          </details>
+        </article>
 
-            <!-- Paper 3 -->
-          <article class="paper">
-  <h3>From Formality to Reality: Reassessing VAT Equity in Dual Economies</h3>
-   <span class="plink"><a href="paper3.pdf" target="_blank" rel="noopener">[Draft]</a></span>
-  <div class="meta-line">
-  <p class="coauthors">with <a href="#">Luciana Galeano</a></p>
-  </div>
-    <details class="abstract">
-    <summary>Abstract</summary>
-    <div>   We study the incidence of the value-added tax (VAT) in settings with high informality.
+        <article class="paper">
+          <h3>From Formality to Reality: Reassessing VAT Equity in Dual Economies
+            <span class="plink"><a href="paper3.pdf" target="_blank" rel="noopener">[Draft]</a></span>
+          </h3>
+          <p class="coauthors">with <a href="#">Luciana Galeano</a></p>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <div>We study the incidence of the value-added tax (VAT) in settings with high informality.
 While often viewed as regressive, recent literature suggests consumption taxes may be
 progressive under the crucial assumptions of zero pass-through in informal markets and
 that low-income households shop predominantly in that sector. We provide product-level
@@ -125,17 +102,11 @@ of commodity taxation with endogenous producer prices and heterogeneous househol
 preferences for sectoral amenities. When we combine our empirical findings on shopping
 behavior and product-level pass-through, the progressivity result disappears, indicating
 that the VAT remains a regressive instrument in this setting.</div>
-  </details>
-</article>
-          
-        </section>
-    
-      </div> <!-- end description -->
-    </div> <!-- end content -->
-  </main>
+          </details>
+        </article>
 
-  <!-- Link to External JavaScript -->
-  <script src="script.js"></script>
+      </section>
+    </div> <!-- end description -->
+  </div> <!-- end content -->
+</main>
 
-</body>
-</html>

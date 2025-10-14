@@ -88,7 +88,6 @@ body {
   margin-top: 40px;
 }
 
-/* Working Papers heading (no underline) */
 .papers h2 {
   font-size: 1.1rem;
   font-weight: bold;
@@ -101,7 +100,7 @@ body {
 /* Each paper block */
 .paper {
   margin-bottom: 16px;
-  color: #000; /* main paper text in black */
+  color: #000;
 }
 
 /* Paper title */
@@ -109,23 +108,39 @@ body {
   font-size: 1rem;
   font-weight: 600;
   color: #000;
-  margin-bottom: 3px; /* tighter before “Presented at” */
+  margin-bottom: 3px;
 }
 
-/* “Job Market Paper” label */
+/* Separate line for job market paper + draft */
+.paper .meta-line {
+  margin: 0 0 3px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+}
+
 .jlabel {
   font-style: italic;
   font-size: 1rem;
   color: #555;
-  margin-left: 6px;
 }
 
-/* “Presented at:” line */
+.plink a {
+  color: #008cba;
+  text-decoration: none;
+}
+
+.plink a:hover {
+  text-decoration: underline;
+}
+
+/* Presented at line */
 .presented {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-style: italic;
   color: #444;
-  margin: 0 0 3px 0; /* tight spacing */
+  margin: 0 0 2px 0; /* tighter before abstract */
 }
 
 /* [Draft] link — brackets also blue */

@@ -97,9 +97,7 @@ body {
   color: #000;
   margin-bottom: 10px;
 }
-.papers {
-  margin-top: 25px;        /* extra cushion from description (was 40px, now more natural) */
-}
+
 .paper { margin-bottom: 16px; color: #000; }
 
 .paper h3 {

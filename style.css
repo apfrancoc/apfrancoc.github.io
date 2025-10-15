@@ -257,16 +257,18 @@ html {
   font-size: 0.95rem;
 }
 
-/* Make [Latest version] appear on a new line */
+/* Make [Latest version] appear on a new line, no indent */
 .latest-link {
-  display: block;        /* forces it to a new line */
-  margin-top: 2px;       /* subtle spacing below title */
+  display: block;        /* puts it on its own line */
+  margin-left: 0;        /* removes the indent */
+  margin-top: 2px;       /* small space below title */
 }
 
 .latest-link a {
   color: #008cba;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.95rem;    /* slightly smaller than title */
+  font-weight: normal;
 }
 
 .latest-link a:hover {

@@ -253,6 +253,7 @@ html {
 .slides-link a:hover {
   text-decoration: underline;
   color: #a67500;            /* darker gold on hover */
+  font-size: 0.95rem;
 }
 
 /* Make [Latest version] appear on a new line */
@@ -265,6 +266,7 @@ html {
 .latest-link a {
   color: #008cba;
   text-decoration: none;
+  font-size: 0.95rem;
 }
 
 .latest-link a:hover {

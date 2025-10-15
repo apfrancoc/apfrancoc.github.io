@@ -135,6 +135,7 @@ body {
   color: #008cba;
   text-decoration: none;
   margin-left: 4px;
+  font-size: 0.95rem;
 }
 .plink a:hover { text-decoration: underline; }
 
@@ -259,7 +260,6 @@ html {
 /* Make [Latest version] appear on a new line */
 .latest-link {
   display: block;        /* forces it to a new line */
-  margin-left: 18px;     /* small indent, aligns with abstract and coauthors */
   margin-top: 2px;       /* subtle spacing below title */
 }
 

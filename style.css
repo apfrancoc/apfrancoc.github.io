@@ -261,7 +261,6 @@ html {
 .latest-link {
   display: block;        /* puts it on its own line */
   margin-left: 0;        /* removes the indent */
-  margin-top: 2px;       /* small space below title */
 }
 
 .latest-link a {
@@ -274,7 +273,9 @@ html {
 .latest-link a:hover {
   text-decoration: underline;
 }
-
+/* kill the inherited plink margin on [Latest version] */
+.latest-link { display:block; margin-left:0; }
+.latest-link a { margin-left:0 !important; padding-left:0; }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {

@@ -105,7 +105,7 @@ body {
   margin-bottom: 30px;     /* adds more space before Working Papers */
 }
 .description p:first-child { margin-top: 0; }
-.description p { margin-bottom: 16px; }
+.description p { margin-bottom: 18px; }
 
 
 /* ---------- Papers ---------- */

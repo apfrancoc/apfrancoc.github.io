@@ -106,7 +106,7 @@ body {
 }
 .description p:first-child { margin-top: 0; }
 .description p { margin-bottom: 25px; }
-.description > p { font-size: 0.93rem; }   /* intro text slightly smaller */
+.description > p { font-size: 0.97rem; }   /* intro text slightly smaller */
 .description > p a { color: #008cba; text-decoration: none; }   /* intro links blue */
 .description > p a:hover { text-decoration: underline; }
 

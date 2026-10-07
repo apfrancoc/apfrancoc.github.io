@@ -125,7 +125,7 @@ body {
 
 .paper h3 {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: normal;
   color: #000;
   display: inline;
   margin-bottom: 2px;
@@ -138,6 +138,13 @@ body {
   font-size: 0.95rem;
 }
 .plink a:hover { text-decoration: underline; }
+
+/* Paper titles as links: black, underlined, not bold */
+.paper h3 a.title-link {
+  color: #000;
+  text-decoration: underline;
+  font-weight: normal;
+}
 
 /* “Job Market Paper” on separate line */
 .meta-line {
@@ -168,7 +175,6 @@ body {
   margin-bottom: 2px;
 }
 .coauthors a {
-  font-style: italic;
   color: #008cba;
   text-decoration: none;
   margin-bottom: 2px;

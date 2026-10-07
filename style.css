@@ -310,3 +310,6 @@ html {
   }
   .papers { text-align: left; }
 }
+
+/* Underline "Abstract" on hover */
+.abstract summary:hover { text-decoration: underline; }

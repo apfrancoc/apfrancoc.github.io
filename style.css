@@ -313,3 +313,6 @@ html {
 
 /* Underline "Abstract" on hover */
 .abstract summary:hover { text-decoration: underline; }
+
+/* CV link always underlined */
+.buttons strong a { text-decoration: underline; }

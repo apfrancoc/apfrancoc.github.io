@@ -255,16 +255,31 @@ html {
   outline: none;
 }
 
-/* Special color for [Slides] links */
-.slides-link a {
-  color: #c58f00;           /* gold / amber */
-  text-decoration: none;
+/* "Slides" line: looks like the Abstract toggle, but gold and opens the PDF */
+.slides-toggle {
+  margin-left: var(--subindent);
+  margin-top: 0;
+  font-size: 0.92rem;
 }
 
-.slides-link a:hover {
+.slides-toggle a {
+  color: #c58f00;           /* gold / amber */
+  text-decoration: none;
+  position: relative;
+  padding-left: 16px;
+}
+
+.slides-toggle a::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c58f00;
+}
+
+.slides-toggle a:hover {
   text-decoration: underline;
   color: #a67500;            /* darker gold on hover */
-  font-size: 0.95rem;
 }
 
 /* Make [Latest version] appear on a new line, no indent */

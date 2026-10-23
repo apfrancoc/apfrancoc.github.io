@@ -203,10 +203,10 @@ body {
   padding-left: 0;
 }
 
-/* [+ Abstract] when closed, [− Abstract] when open */
-.abstract summary::before { content: "[+ "; }
-.abstract summary::after  { content: "]"; }
-details[open].abstract summary::before { content: "[\2212\00a0"; }
+/* [Abstract +] when closed, [Abstract −] when open */
+.abstract summary::before { content: "["; }
+.abstract summary::after  { content: "\00a0+]"; }
+details[open].abstract summary::after { content: "\00a0\2212]"; }
 
 .abstract div {
   margin-top: 3px;

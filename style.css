@@ -193,22 +193,22 @@ body {
 
 .abstract summary {
   cursor: pointer;
-  color: #777;
+  color: #555;
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
   position: relative;
   font-size: 0.92rem;
-  padding-left: 16px;
+  padding-left: 0;
 }
 
 .abstract summary::before {
-  content: "▶";
+  content: none;
   position: absolute;
   left: 0;
   top: 0;
-  color: #777;
+  color: #555;
   font-weight: normal;
   transition: transform .2s ease;
 }
@@ -218,7 +218,7 @@ details[open] summary::before { transform: rotate(90deg); }
   margin-top: 3px;
   color: #444;
   font-size: 0.95rem;
-  margin-left: 16px; /* align under arrow text */
+  margin-left: 0;
 }
 
 /* ---- Fix stubborn spacing above Abstract ---- */
@@ -261,28 +261,28 @@ html {
 .slides-toggle {
   position: absolute;
   top: 0;
-  left: calc(var(--subindent) + 6.5em);
+  left: calc(var(--subindent) + 5.2em);
   font-size: 0.92rem;
 }
 
 .slides-toggle a {
-  color: #777;
+  color: #555;
   text-decoration: none;
   position: relative;
-  padding-left: 16px;
+  padding-left: 0;
 }
 
 .slides-toggle a::before {
-  content: "▶";
+  content: none;
   position: absolute;
   left: 0;
   top: 0;
-  color: #777;
+  color: #555;
 }
 
 .slides-toggle a:hover {
   text-decoration: underline;
-  color: #444;
+  color: #333;
 }
 
 /* Make [Latest version] appear on a new line, no indent */
@@ -335,3 +335,5 @@ html {
 
 /* CV link always underlined */
 .buttons strong a { text-decoration: underline; }
+
+.abstract summary::-webkit-details-marker { display: none; }

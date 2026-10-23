@@ -193,7 +193,7 @@ body {
 
 .abstract summary {
   cursor: pointer;
-  color: #008cba;
+  color: #777;
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 0;
@@ -208,7 +208,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  color: #008cba;
+  color: #777;
   font-weight: normal;
   transition: transform .2s ease;
 }
@@ -256,14 +256,17 @@ html {
 }
 
 /* "Slides" line: looks like the Abstract toggle, but gold and opens the PDF */
+/* Abstract + Slides on one line: Slides sits to the right of "Abstract" */
+.toggles { position: relative; }
 .slides-toggle {
-  margin-left: var(--subindent);
-  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: calc(var(--subindent) + 6.5em);
   font-size: 0.92rem;
 }
 
 .slides-toggle a {
-  color: #c58f00;           /* gold / amber */
+  color: #777;
   text-decoration: none;
   position: relative;
   padding-left: 16px;
@@ -274,12 +277,12 @@ html {
   position: absolute;
   left: 0;
   top: 0;
-  color: #c58f00;
+  color: #777;
 }
 
 .slides-toggle a:hover {
   text-decoration: underline;
-  color: #a67500;            /* darker gold on hover */
+  color: #444;
 }
 
 /* Make [Latest version] appear on a new line, no indent */

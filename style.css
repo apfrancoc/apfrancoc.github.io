@@ -187,7 +187,7 @@ body {
 
 /* ---------- Abstract toggle ---------- */
 .abstract {
-  margin-left: var(--subindent);
+  margin-left: 0;
   margin-top: 0;
 }
 
@@ -261,7 +261,7 @@ html {
 .slides-toggle {
   position: absolute;
   top: 0;
-  left: calc(var(--subindent) + 5.2em);
+  left: 5.2em;
   font-size: 0.92rem;
 }
 

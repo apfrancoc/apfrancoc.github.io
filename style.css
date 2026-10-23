@@ -142,12 +142,13 @@ body {
 }
 .plink a:hover { text-decoration: underline; }
 
-/* Paper titles as links: black, underlined, not bold */
+/* Paper titles as links: blue, not underlined, not bold */
 .paper h3 a.title-link {
-  color: #000;
-  text-decoration: underline;
+  color: #008cba;
+  text-decoration: none;
   font-weight: normal;
 }
+.paper h3 a.title-link:hover { text-decoration: underline; }
 
 /* “Job Market Paper” on separate line */
 .meta-line {

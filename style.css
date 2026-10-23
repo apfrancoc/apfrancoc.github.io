@@ -203,16 +203,10 @@ body {
   padding-left: 0;
 }
 
-.abstract summary::before {
-  content: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #555;
-  font-weight: normal;
-  transition: transform .2s ease;
-}
-details[open] summary::before { transform: rotate(90deg); }
+/* [+ Abstract] when closed, [− Abstract] when open */
+.abstract summary::before { content: "[+ "; }
+.abstract summary::after  { content: "]"; }
+details[open].abstract summary::before { content: "[\2212\00a0"; }
 
 .abstract div {
   margin-top: 3px;
@@ -261,7 +255,7 @@ html {
 .slides-toggle {
   position: absolute;
   top: 0;
-  left: 5em;
+  left: 6em;
   font-size: 0.92rem;
 }
 

@@ -70,7 +70,7 @@ body {
 /* “CV” link — bold + blue */
 .buttons strong a {
   font-weight: bold;
-  color: #008cba;        /* blue like your other links */
+  color: #0b5394;        /* blue like your other links */
   text-decoration: none;
 }
 
@@ -86,7 +86,7 @@ body {
 
 /* email address — normal blue, not bold */
 .buttons a {
-  color: #008cba;
+  color: #0b5394;
   text-decoration: none;
   font-weight: normal;
   margin: 0 3px;
@@ -107,7 +107,7 @@ body {
 .description p:first-child { margin-top: 0; }
 .description p { margin-bottom: 25px; }
 .description > p { font-size: 0.97rem; color: #000; }   /* intro text slightly smaller, black */
-.description > p a { color: #008cba; text-decoration: none; }   /* intro links blue */
+.description > p a { color: #0b5394; text-decoration: none; }   /* intro links blue */
 .description > p a:hover { text-decoration: underline; }
 
 
@@ -135,7 +135,7 @@ body {
 }
 
 .plink a {
-  color: #008cba;
+  color: #0b5394;
   text-decoration: none;
   margin-left: 4px;
   font-size: 0.95rem;
@@ -144,7 +144,7 @@ body {
 
 /* Paper titles as links: blue, not underlined, not bold */
 .paper h3 a.title-link {
-  color: #008cba;
+  color: #0b5394;
   text-decoration: none;
   font-weight: normal;
 }
@@ -286,7 +286,7 @@ html {
 }
 
 .latest-link a {
-  color: #008cba;
+  color: #0b5394;
   text-decoration: none;
   font-size: 0.95rem;    /* slightly smaller than title */
   font-weight: normal;

@@ -367,7 +367,7 @@ main.container {
   flex: 1 1 auto;
 }
 .description .name {
-  font-size: 1.3rem;
+  font-size: 1.1rem;   /* same size as "Working Papers" */
   font-weight: bold;
   color: #000;
   line-height: 1.2;

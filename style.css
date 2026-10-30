@@ -336,14 +336,13 @@ html {
 .papers.numbered { counter-reset: paper; }
 .papers.numbered .paper {
   counter-increment: paper;
-  position: relative;
-  padding-left: 1.4em;
+  padding-left: 1.4rem;
 }
-.papers.numbered .paper::before {
+.papers.numbered .paper h3::before {
   content: counter(paper) ".";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1rem;
+  display: inline-block;
+  width: 1.4rem;
+  margin-left: -1.4rem;
+  font-size: 0.85rem;
   color: #000;
 }

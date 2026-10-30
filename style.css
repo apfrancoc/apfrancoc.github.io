@@ -359,7 +359,7 @@ main.container {
 .profile {
   position: sticky;
   top: 40px;
-  align-items: flex-start;
+  align-items: center;   /* CV | Email centered under the photo */
 }
 .description {
   margin-left: 0;

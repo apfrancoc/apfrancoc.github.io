@@ -346,3 +346,36 @@ html {
   font-size: 0.85rem;
   color: #000;
 }
+
+/* Photo column on the left, a little in from the edge; it stays in place while the page scrolls.
+   The name sits at the top of the text column, level with the photo. */
+main.container {
+  max-width: none;
+  margin: 70px 0 0;
+  padding: 20px 7% 20px 11%;
+  justify-content: flex-start;
+}
+.content { justify-content: flex-start; gap: 50px; width: 100%; }
+.profile {
+  position: sticky;
+  top: 40px;
+  align-items: flex-start;
+}
+.description {
+  margin-left: 0;
+  max-width: 690px;   /* right edge = end of the "...Assistant Professor in 2027." line */
+  flex: 1 1 auto;
+}
+.description .name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+@media (max-width: 768px) {
+  main.container { padding: 20px; margin-top: 30px; }
+  .profile { position: static; align-items: center; }
+  .description { max-width: 92%; }
+  .description .name { text-align: center; }
+}

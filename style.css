@@ -379,3 +379,10 @@ main.container {
   .description { max-width: 92%; }
   .description .name { text-align: center; }
 }
+
+/* Very light grey line between the intro and Working Papers */
+.description > section.papers:first-of-type {
+  border-top: 1px solid #ebebeb;
+  margin-top: 30px;
+  padding-top: 30px;
+}

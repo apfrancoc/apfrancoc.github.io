@@ -419,3 +419,7 @@ details[open].abstract summary::after { content: none; }
 
 /* Paper titles the same size as the coauthors (0.92rem) */
 .paper h3 { font-size: 0.92rem; }
+
+/* CV link not underlined (underline only on hover) */
+.buttons strong a { text-decoration: none; }
+.buttons strong a:hover { text-decoration: underline; }

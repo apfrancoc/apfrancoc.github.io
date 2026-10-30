@@ -386,3 +386,7 @@ main.container {
   margin-top: 30px;
   padding-top: 30px;
 }
+
+/* Coauthors on the same line as the title: "Title (with L. Galeano)" */
+.paper .coauthors { display: inline; }
+.paper .coauthors a { white-space: nowrap; }   /* never split a coauthor's name across lines */

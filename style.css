@@ -392,7 +392,7 @@ main.container {
 .paper .coauthors a { white-space: nowrap; }   /* never split a coauthor's name across lines */
 
 /* Smaller "Presented at:" line (was 0.85rem) */
-.paper .presented { font-size: 0.78rem; }
+.paper .presented { font-size: 0.78rem; line-height: 1.3; }   /* tighter: the two lines sit closer together */
 
 /* Triangles back on the toggles: "▶ Abstract" (points down when open) and "▶ Slides"; no brackets */
 .abstract summary { padding-left: 1.1em; }

@@ -390,3 +390,6 @@ main.container {
 /* Coauthors on the same line as the title: "Title (with L. Galeano)" */
 .paper .coauthors { display: inline; }
 .paper .coauthors a { white-space: nowrap; }   /* never split a coauthor's name across lines */
+
+/* Smaller "Presented at:" line (was 0.85rem) */
+.paper .presented { font-size: 0.78rem; }

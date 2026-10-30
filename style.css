@@ -408,7 +408,7 @@ main.container {
 details[open].abstract summary::before { transform: rotate(90deg); }
 .abstract summary::after,
 details[open].abstract summary::after { content: none; }
-.slides-toggle { left: 6.6em; }
+.slides-toggle { left: 5.85em; }   /* about 12px after "Abstract" */
 .slides-toggle a { padding-left: 1.1em; }
 .slides-toggle a::before {
   content: "\25B6\FE0E";

@@ -393,3 +393,26 @@ main.container {
 
 /* Smaller "Presented at:" line (was 0.85rem) */
 .paper .presented { font-size: 0.78rem; }
+
+/* Triangles back on the toggles: "▶ Abstract" (points down when open) and "▶ Slides"; no brackets */
+.abstract summary { padding-left: 1.1em; }
+.abstract summary::before {
+  content: "\25B6\FE0E";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  font-size: 0.7em;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+details[open].abstract summary::before { transform: rotate(90deg); }
+.abstract summary::after,
+details[open].abstract summary::after { content: none; }
+.slides-toggle { left: 6.6em; }
+.slides-toggle a { padding-left: 1.1em; }
+.slides-toggle a::before {
+  content: "\25B6\FE0E";
+  top: 0.4em;
+  font-size: 0.7em;
+  line-height: 1;
+}

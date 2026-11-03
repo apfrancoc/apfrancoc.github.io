@@ -427,3 +427,11 @@ details[open].abstract summary::after { content: none; }
 /* Title + coauthors: when the coauthors wrap, the second line sits close to the first */
 .paper { line-height: 1.3; }
 .paper .abstract, .paper .slides-toggle { line-height: 1.5; }   /* abstract text keeps its spacing */
+
+/* Paper status line (e.g., "Under review") */
+.paper .status {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+  margin-left: 6px;
+}

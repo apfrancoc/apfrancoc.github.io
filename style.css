@@ -432,6 +432,6 @@ details[open].abstract summary::after { content: none; }
 .paper .status {
   font-size: 0.85rem;
   font-style: italic;
-  color: #555;
+  color: #000;
   margin-left: 2px;
 }
